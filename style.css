@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #11151C;
+}
+
+/* nav section */
+nav svg{
+    height: 50px;
+    width: 50px;
+}
+nav{
+    background-color: #364156;
+    height: 70px;
+    
+}
