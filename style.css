@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Monomaniac+One&family=Special+Gothic+Expanded+One&display=swap');
+:root{
+    --logoFont: "Lily Script One", system-ui;
+    --secondaryBG: #1C2541;
+    --thirdBG: #3A506B;
+    --firstBG: #11151C;
+    --textFont: "Special Gothic Expanded One", sans-serif;
+    --btnBGcolor: #70E000;
+    --headerText: "Monomaniac One", sans-serif;
+}
 *{
     padding: 0;
     margin: 0;
@@ -5,6 +15,7 @@
 }
 body{
     background-color: #11151C;
+    height: 90vh;
 }
 
 /* nav section */
@@ -16,4 +27,77 @@ nav{
     background-color: #364156;
     height: 70px;
     
+}
+a h3{
+    height:auto;
+    border: none;
+    padding: auto 0;
+    margin: 0; 
+    align-self: center;
+    font-family: var(--logoFont);
+    
+}
+.money-con{
+    background-color: var(--secondaryBG);
+}
+.info-con{
+    background: var(--thirdBG);
+}
+input#bet{
+    outline: none;
+    border-top: 5px solid var(--firstBG);
+    border-bottom: 5px solid var(--firstBG);
+    border-left: 5px solid var(--firstBG);
+    border-right: none; /* optional, or just let it be */
+    border-radius: 5px 0 0 5px;
+    background-color: var(--secondaryBG);
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+}
+input#bet::placeholder{
+    color: rgb(154, 154, 154)
+}
+#multiplier{
+    border: none;
+    padding: 0 5px;
+    color: white;
+    background-color: var(--firstBG);
+    font-family: var(--textFont);
+    outline: none;
+}
+#multiplier option{
+    border: none;
+    outline:none;
+}
+#number_of_mines{
+    width: 92%;
+    padding: 10px;
+    font-size: 18px;
+    font-family: var(--textFont);
+    border: 3px solid var(--firstBG);
+    background-color: var(--secondaryBG);
+    color: white;
+}
+#play_btn{
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--btnBGcolor);
+    color: white;
+    font-family: var(--textFont);
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.header-text {
+    font-family: var(--headerText);
+    font-size: 80px;
+    text-align: center;
+    color: white;
+}
+.mb-3 label{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
