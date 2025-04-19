@@ -101,3 +101,31 @@ input#bet::placeholder{
     font-size: 20px;
     font-weight: bold;
 }
+.game-con{
+    height: auto;
+    width: 80%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+.box{
+    height: 120px;
+    width: 120px;
+    background-color: var(--thirdBG);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotate{
+    transform: rotateY(180deg);
+}
+
+/* .box i {
+    font-size:;
+} */
