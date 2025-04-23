@@ -29,7 +29,7 @@
                         <div class="mb-3">
                             <label for="amount" class="form-label">Amount</label>
                             <div class="input-con d-flex ">
-                                <input type="number" id="bet" placeholder="0" >
+                                <input type="number" id="bet" placeholder="0" name="bet" value="100">
                                 <select name="multiplier" id="multiplier">
                                     <option value="1">1 x</option>
                                     <option value="2">2 x</option>
@@ -59,6 +59,13 @@
             </div>
         </div>
     </main>
+    <!-- Fullscreen wrapper -->
+    <div class="modal-wrapper d-flex align-items-center justify-content-center d-none">
+        <div class="countdown-modal bg-white p-4 d-flex align-items-center justify-content-center">
+            <h1 class="m-0 " id="countdown">5</h1>
+        </div>
+    </div>
+  
     <script src="script.js" defer></script>
 </body>
 </html>
