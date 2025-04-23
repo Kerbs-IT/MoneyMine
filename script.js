@@ -1,11 +1,37 @@
 const form = document.getElementById("form-con");
 const boxContainer = document.querySelector(".game-con");
+const playBtn = document.getElementById('play_btn');
+const modalCon = document.querySelector('.modal-wrapper');
+const countDown = document.getElementById('countdown');
+let count = 5;
 var arrCon = [];
 var bombsCoor = [];
+
+// click the play button
 form.addEventListener("submit", (e) =>{
     e.preventDefault();
     console.log('submit working');
+
+    count = 5;
+    countDown.innerHTML = count; // set the count back to 5
+
+    modalCon.classList.remove('d-none');
+    
+    const interval = setInterval(() => {
+        countDown.innerHTML = count;
+        count--;
+    
+        if (count < 0) {
+            clearInterval(interval);
+            modalCon.classList.add('d-none'); // hide the modal
+        }
+    }, 1000);
+    
+
+    
+
 });
+
 
 function populateBox(){
     let div = ''; 
