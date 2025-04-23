@@ -21,14 +21,13 @@
     </header>
     <main class="container d-flex align-items-center justify-content-center h-100 w-100">
         <div class="container-sm rounded money-con" style="height: 750px;">
-            <div class="row h-100 rounded overflow-hidden">
-                <i class="fa-solid fa-gem" style="color: #70e000;"></i>
+            <div class="row h-100 rounded custom-row">
                 <div class="col-4 h-100 info-con">
                     <h3 class="header-text">Place Your Bet</h3>
                     <form action="" method="post" id="form-con">
                         <div class="mb-3">
                             <label for="amount" class="form-label">Amount</label>
-                            <div class="input-con d-flex ">
+                            <div class="input-con d-flex">
                                 <input type="number" id="bet" placeholder="0" name="bet" value="100">
                                 <select name="multiplier" id="multiplier">
                                     <option value="1">1 x</option>
@@ -41,11 +40,11 @@
                         </div>
                         <div class="mb-3 d-flex flex-column gap-2">
                             <label for="number_of_mines">Mines</label>
-                            <select name="mines" id="number_of_mines" class="rounded" >
+                            <select name="mines" id="number_of_mines" class="rounded">
                                 <option value="4">4</option>
                                 <option value="6">6</option>
                                 <option value="8">8</option>
-                                <option value="10">10</option>k
+                                <option value="10">10</option>
                             </select>
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
@@ -53,12 +52,16 @@
                         </div>
                     </form>
                 </div>
-                <div class="col h-100 w-100 box-container d-flex align-items-center justify-content-center">
+                <div class="col h-100 w-100 box-container d-flex align-items-center flex-column gap-2 justify-content-center">
+                    <div id="winning-money-con" class="d-flex justify-content-center align-items-center rounded">
+                        <h1 class="winning-money">100x1</h1>
+                    </div>
                     <div class="game-con"></div>
                 </div>
             </div>
         </div>
     </main>
+
     <!-- Fullscreen wrapper -->
     <div class="modal-wrapper d-flex align-items-center justify-content-center d-none">
         <div class="countdown-modal bg-white p-4 d-flex align-items-center justify-content-center">

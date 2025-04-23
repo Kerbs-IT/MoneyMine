@@ -150,4 +150,19 @@ input#bet::placeholder{
 .countdown-modal h1{
     font-size: clamp(50px,10.5vw,20vw);
 }
-  
+#winning-money-con{
+    background: var(--thirdBG);
+    padding: 10px;
+}
+.winning-money{
+    color: white;
+    margin: 0;
+}
+.custom-row{
+    display: flex;
+}
+@media (max-width: 500px){
+    .custom-row{
+        flex-direction: column;
+    }
+}
