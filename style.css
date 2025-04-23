@@ -129,3 +129,25 @@ input#bet::placeholder{
 /* .box i {
     font-size:;
 } */
+
+/* countdown modal */
+.modal-wrapper {
+    position: fixed; /* Always on top */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(255,255,255,0.1) !important;
+}
+  
+.countdown-modal {
+    width: 50%;
+    max-width: 300px;
+    aspect-ratio: 1; /* Keeps it square and responsive */
+    border-radius: 12px;
+}
+.countdown-modal h1{
+    font-size: clamp(50px,10.5vw,20vw);
+}
+  
