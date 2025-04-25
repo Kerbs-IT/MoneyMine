@@ -6,6 +6,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.19.1/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.19.1/dist/sweetalert2.min.css">
     <title>MoneyMine</title>
 </head>
 <body>
@@ -19,10 +21,10 @@
             </div>
         </nav>
     </header>
-    <main class="container d-flex align-items-center justify-content-center h-100 w-100">
-        <div class="container-sm rounded money-con" style="height: 750px;">
-            <div class="row h-100 rounded custom-row">
-                <div class="col-4 h-100 info-con">
+    <main class="container-fluid d-flex align-items-center justify-content-center h-100 w-100">
+        <div class="container-sm rounded money-con">
+            <div class="row h-100 rounded custom-row d-flex flex-lg-row flex-column">
+                <div class="col-lg-4 col-12 info-con">
                     <h3 class="header-text">Place Your Bet</h3>
                     <form action="" method="post" id="form-con">
                         <div class="mb-3">
@@ -47,20 +49,29 @@
                                 <option value="10">10</option>
                             </select>
                         </div>
+                        <div class="balance-con d-flex gap-1 mb-3">
+                            <h4 class="text-muted">Balance: </h4>
+                            <h4 class="balance text-white">500</h4>
+                            <input type="number" value="100" name="balance" hidden>
+                        </div>
                         <div class="mb-3 d-flex justify-content-center">
                             <input type="submit" value="PLAY" id="play_btn">
                         </div>
                     </form>
                 </div>
-                <div class="col h-100 w-100 box-container d-flex align-items-center flex-column gap-2 justify-content-center">
+                <div class="col-lg col-12 box-container d-flex align-items-center flex-column gap-2 justify-content-center">
                     <div id="winning-money-con" class="d-flex justify-content-center align-items-center rounded">
                         <h1 class="winning-money">100</h1>
                     </div>
                     <div class="game-con"></div>
+                    <div class="out-con">
+                        <button id="bet-out" class="btn btn-success m-auto">Bet out</button>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+    
 
     <!-- Fullscreen wrapper -->
     <div class="modal-wrapper d-flex align-items-center justify-content-center d-none">
