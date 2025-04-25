@@ -39,7 +39,11 @@ a h3{
 }
 .money-con{
     background-color: var(--secondaryBG);
+    /* max-height: 750px !important; */
+    /* height: auto !important; */
+    height: 800px !important;
 }
+
 .info-con{
     background: var(--thirdBG);
 }
@@ -163,6 +167,13 @@ input#bet::placeholder{
 }
 @media (max-width: 500px){
     .custom-row{
-        flex-direction: column;
+        flex-direction: column !important;
     }
+    .money-con{
+        height: auto;
+    }
+    /* .box{
+        width: 50px !important;
+        height: 50px !important;
+    } */
 }
