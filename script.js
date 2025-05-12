@@ -96,10 +96,23 @@ boxes.forEach(box =>{
     
 })
 // click the play button
-form.addEventListener("submit", (e) =>{
+
+
+function updateBetButton(){
+    if(!playing){
+        betOut.disabled = true;
+    }else{
+        betOut.disabled = false;
+    }
+}
+updateBetButton();
+
+function handleSubmit(e){
     active = true;
     e.preventDefault();
     console.log('submit working');
+    currentWin = 0;
+    console.log("currentwin:",currentWin);
 
     // get the value of the form
     let bet = e.target.bet.value;
@@ -108,7 +121,6 @@ form.addEventListener("submit", (e) =>{
     // balance = Number(e.target.balance.value);
     let winningCount = 1;
     let totalWin = bet;
-    currentWin = 0;
 
     // change the static winning
     winningCon.innerHTML = (totalWin * winningCount)*multiplier;
@@ -225,6 +237,7 @@ form.addEventListener("submit", (e) =>{
                             reset = true; // this mean the user click the bomb
                             playing = false;
                             currentWin = 0;
+                            winningCount = 1;
 
                             balance = balance - Number(bet);
                             if(balance < 0){
@@ -243,9 +256,9 @@ form.addEventListener("submit", (e) =>{
 
                             winningCount++;
 
-                            winningCon.innerHTML = (totalWin * multiplier)*winningCount;
+                            winningCon.innerHTML = (totalWin * winningCount)* multiplier;
 
-                            currentWin = Number(winningCon.innerHTML); // ✅ just in case
+                            currentWin = (totalWin * winningCount)* multiplier; 
 
                             
 
@@ -267,7 +280,13 @@ form.addEventListener("submit", (e) =>{
             balance = balance +  Number(currentWin);
             console.log("new balance: ", balance);
             balanceCon.innerHTML = balance;
+            currentWin = 0;
+            winningCount = 1;
             reset = true;
+            active = false;
+            form.removeEventListener('submit',handleSubmit);
+
+
         });
 
 
@@ -284,14 +303,9 @@ form.addEventListener("submit", (e) =>{
     }
     
 
-    
-});
-
-function updateBetButton(){
-    if(!playing){
-        betOut.disabled = true;
-    }else{
-        betOut.disabled = false;
-    }
 }
-updateBetButton();
+form.addEventListener("submit", handleSubmit);
+
+function boxRotation(e){
+    
+}
